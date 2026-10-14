@@ -1,0 +1,155 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 32px, 680px);
+  margin: 40px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 24px rgba(15, 23, 42, 0.08);
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+  color: #1d4ed8;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 26px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+button {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+form button {
+  margin-top: 8px;
+}
+
+button:hover {
+  filter: brightness(0.94);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.message {
+  padding: 12px;
+  background: #eff6ff;
+  border-radius: 7px;
+  overflow-wrap: anywhere;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.list-heading h2 {
+  font-size: 21px;
+}
+
+.refresh-button {
+  padding: 9px 12px;
+}
+
+.empty {
+  color: #64748b;
+}
+
+.student-list {
+  display: grid;
+  gap: 14px;
+}
+
+.student-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+}
+
+.student-card h3 {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.student-card p {
+  margin: 5px 0;
+  color: #64748b;
+  overflow-wrap: anywhere;
+}
+
+.delete-button {
+  flex-shrink: 0;
+  background: #dc2626;
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 16px auto;
+    padding: 18px;
+  }
+
+  .student-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
